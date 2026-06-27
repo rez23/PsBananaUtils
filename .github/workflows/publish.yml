@@ -1,0 +1,24 @@
+name: Publish to PowerShell Gallery
+
+on:
+  push:
+    tags:
+      - 'v*'   # Pubblica solo quando fai un tag tipo v1.0.0
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PowerShellGet
+        shell: pwsh
+        run: |
+          Install-Module PowerShellGet -Force -AllowClobber
+
+      - name: Publish module
+        shell: pwsh
+        run: |
+          Publish-Module -Path "./PsBananaUtils" -NuGetApiKey "${{ secrets.PSGALLERY_API_KEY }}"
