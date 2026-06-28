@@ -67,7 +67,7 @@ Install-PsResource -Name PsBananaUtils.Miscellaneous
 `PsBananaUtils` does not export anything itself; it is more or less a namespace package for the child modules described above. Here I provide a brief explanation of what each module is:
 - `PsBananaUtils.HyperV`: The main goal is to manage your Hyper-V VMs by saving a default VM setup (credentials and VM name).
 - `PsBananaUtils.Windows`: Basically provides some aliases and helper functions for Windows, like creating junctions and checking adapters and IPs.
-- `PsBananaUtils.WSL`: Not much here for now, mainly provides `Start-WslVirtualDriveCleanup`, which allows shrinking WSL VHDs to reclaim disk space.
+- `PsBananaUtils.WSL`: Not much here for now, mainly provides `Optimize-WslVirtualDrive`, which allows shrinking WSL VHDs to reclaim disk space.
 - `PsBananaUtils.PowerShell`: Includes many handlers and utility functions that enhance everyday PowerShell usage.
 - `PsBananaUtils.Miscellaneous`: Mainly provides `Get-SingleFolderFromGitRemote`
 
@@ -119,11 +119,18 @@ Get-NetAdapatersInfo | ? {$_Name -match "ethernet"}
 ```
 - `New-*` aliases from [`PsBananaUtils.Windows`](https://github.com/rez23/PsBananaUtils.Windows):<br>
 Simple provide some aliases functions to `New-Item -ItemType Directory` eccetera that maintains completion
+- `Optimize-WslVirtualDrives` from [`PsBananaUtils.WSL`]:<br>
+Optimize WSL and Docker VHD image to reclaim your free disk space (a well know WSL bug)
+```powershell
+Optimize-WslVirtualDrives
+```
+
 
 And more. Get all available commands using `Get-Command`:
 ```powershell
 Get-Command -Module PsBananaUtils*
 ```
+and if you need get more docs with `Get-Help`
 
 [Get it on PowerShell Gallery](https://www.powershellgallery.com/packages/PsBananaUtils)
 
