@@ -46,7 +46,7 @@ Import-Module PsBananaUtils.WSL
 ## About the project
 I created this module to keep together the various solutions I’ve built over time to handle tasks I often need during my daily PowerShell usage. I plan to continue adding utilities as I create them.
 
-## Substain the project
+## Support the project
 If you like my work, leave a star on this repository or donate me a coffee:
 - [PayPall.me](https://paypal.me/rez23774)
 - [Ko-Fi](https://ko-fi.com/spartacoamadei)
