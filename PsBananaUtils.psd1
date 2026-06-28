@@ -12,7 +12,7 @@
     RootModule        = 'PsBananaUtils.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '1.0.0'
+    ModuleVersion     = '1.0.1'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -75,7 +75,26 @@
     # NestedModules = @()
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-    FunctionsToExport = @()
+    FunctionsToExport = @(
+        "Copy-FileToVirtualMachine",
+        "Enter-VirtualMachine",
+        "Get-VirtualMachineAliasesSetup",
+        "Get-VirtualMachinesInfo",
+        "Invoke-VirtualMachine",
+        "Register-VirtualMachineAliases",
+        "Start-VirtualMachine",
+        "Stop-VirtualMachine",
+        "Unregister-VirtualMachineAliases",
+        "Find-PowershellHistory",
+        "Get-PathFromCommand",
+        "Reset-Module",
+        "Find-Process",
+        "Get-NetAdaptersInfo",
+        "New-Directory",
+        "New-File",
+        "New-Junction",
+        "New-Symlink"
+    )
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
     CmdletsToExport   = '*'
@@ -84,7 +103,9 @@
     VariablesToExport = '*'
 
     # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-    AliasesToExport   = @()
+    AliasesToExport   = @(
+        'shistory', 'whereis', 'vmenter', 'vmguest', 'vmcopy', 'vmstart', 'vmstop', 'jn', 'ln'
+    )
 
     # DSC resources to export from this module
     # DscResourcesToExport = @()
@@ -101,7 +122,7 @@
         PSData = @{
 
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags = @(
+            Tags       = @(
                 'PowerShell', 
                 'Utilities', 
                 'Banana', 
