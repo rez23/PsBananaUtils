@@ -81,5 +81,5 @@ I created this module to keep together the various solutions I’ve built over t
 
 ## Support the project
 If you like my work, leave a star on this repository or donate me a coffee:
-- https://paypal.me/rez23774
-- https://ko-fi.com/spartacoamadei
+- [Ko-Fi](https://paypal.me/rez23774)
+- [PayPal.me](https://ko-fi.com/spartacoamadei)
