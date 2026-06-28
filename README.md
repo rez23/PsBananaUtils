@@ -1,4 +1,4 @@
-# 🍌 PsBananaUtils a PowerShell utilities module
+# 🍌 PsBananaUtils a collection of helpers for Windows PowerShell
 ## What is this
 This is a simple umbrella module that gathers together various utility modules I’ve written for myself over the years, which are very useful for many tasks in PowerShell (at least on Windows).  
 
@@ -111,7 +111,7 @@ Return info (with available IP addresses) from Registered VM config or against a
 # Get Ipv4 addresses of all available VM
 Get-VirtualMachineInfo -All | % {$_.IPv4}
 ```
-- `Get-NetAdaptersInfo` from [`PsBananaUtils.Windows`](https://github.com/rez23/PsBananaUtils.Windows)
+- `Get-NetAdaptersInfo` from [`PsBananaUtils.Windows`](https://github.com/rez23/PsBananaUtils.Windows):<br>
 Return all Network adapters on current machine with its Ip addresses
 ```powershell
 # Get all ethernet adapters and its associated Ip from machine
