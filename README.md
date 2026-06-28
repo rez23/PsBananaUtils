@@ -43,6 +43,15 @@ Import-Module PsBananaUtils.Windows
 # Import only WSL utilities
 Import-Module PsBananaUtils.WSL
 ```
+## More info about
+Use Get-Help and Get-Command to have more info about the module
+```
+# See all avaiolable applets
+Get-Command -Module PsBananaUtils
+
+# See specific module help
+Get-Help Get-PowerShellVersions
+```
 ## About the project
 I created this module to keep together the various solutions I’ve built over time to handle tasks I often need during my daily PowerShell usage. I plan to continue adding utilities as I create them.
 
