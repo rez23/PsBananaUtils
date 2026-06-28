@@ -1,4 +1,4 @@
-# 🍌 PsBananaUtilsa set of facilities and utilities for Windows PowerShell 
+# 🍌 PsBananaUtilsa utilities for Windows PowerShell 
 ## What is this
 This is a simple umbrella module that gathers together various utility modules I’ve written for myself over the years, which are very useful for many tasks in PowerShell (at least on Windows).
 - [PsBananaUtils.HyperV](https://github.com/rez23/PsBananaUtils.HyperV)
