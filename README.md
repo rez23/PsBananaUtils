@@ -2,11 +2,11 @@
 ## What is this
 This is a simple umbrella module that gathers together various utility modules I’ve written for myself over the years, which are very useful for many tasks in PowerShell (at least on Windows).  
 
-- https://github.com/rez23/PsBananaUtils.HyperV
-- https://github.com/rez23/PsBananaUtils.Miscellaneous
-- https://github.com/rez23/PsBananaUtils.PowerShell
-- https://github.com/rez23/PsBananaUtils.Windows
-- https://github.com/rez23/PsBananaUtils.WSL
+- [PsBananaUtils.HyperV](https://github.com/rez23/PsBananaUtils.HyperV)
+- [PsBananaUtils.Miscellaneous](https://github.com/rez23/PsBananaUtils.Miscellaneous)
+- [PsBananaUtils.PowerShell](https://github.com/rez23/PsBananaUtils.PowerShell)
+- [PsBananaUtils.Windows](https://github.com/rez23/PsBananaUtils.Windows)
+- [PsBananaUtils.WSL](https://github.com/rez23/PsBananaUtils.WSL)
 
 ## Install the module
 Install the module using `Install-PsResource` or `Install-Module`:
