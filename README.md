@@ -79,6 +79,54 @@ Get-Help Get-VirtualMachineInfo
 ## About the project
 I created this module to keep together the various solutions I’ve built over time to handle tasks I often need during my daily PowerShell usage. I plan to continue adding utilities as I create them.
 
+## Some usefull things in this module:
+- `Invoke-CustomPowerShell`:<br>
+This command permit to launch a command inside a custom powershell version on the local machine maintaining PowerShell object serialization:
+```powershell
+Invoke-CustomPowerShell -Version 7 -Command {ls} | ? { 
+    # This work becouse serialization is rebuilt from 
+    # custom pwsh.exe output
+    $_.BaseName -match ".ps1" 
+}
+```
+- `Invoke-CustomPowerShell` from [`PsBananaUtils.PoerShell`](https://github.com/rez23/PsBananaUtils.PowerShell):<br>
+permit also to launch custom PowerShell binary of your choice
+```powershell
+Invoke-CustomPowerShell -CustomPowerShellPath "C:\pwsh.exe" -Command {ls}
+```
+There is also a command to check what PowerShell version are on current machine
+```powershell
+Get-PowerShellVersions -All
+```
+- the`*-VirtualMachine*` commands from [`PsBananaUtils.HyperV`](https://github.com/rez23/PsBananaUtils.HyperV):<br>    
+Permit to "register" a preferred HyperV session for VMName and Credential
+```powershell
+Register-VirtualMachineAliasesConfig -Credential (Import-Clixmap -Path "C:\MyCert.xml") -VMName "My VM"
+# from now you can launch Vm command directly in this session
+Invoke-VirtualMachine -Command {ls}
+```
+- `Get-VirtualMachineInfo` from [`PsBananaUtils.HyperV`](https://github.com/rez23/PsBananaUtils.HyperV):<br>
+Return info (with available IP addresses) from Registered VM config or against all your VMs
+```powershell
+# Get Ipv4 addresses of all available VM
+Get-VirtualMachineInfo -All | % {$_.IPv4}
+```
+- `Get-NetAdaptersInfo` from [`PsBananaUtils.Windows`](https://github.com/rez23/PsBananaUtils.Windows)
+Return all Network adapters on current machine with its Ip addresses
+```powershell
+# Get all ethernet adapters and its associated Ip from machine
+Get-NetAdapatersInfo | ? {$_Name -match "ethernet"}
+```
+- `New-*` aliases from [`PsBananaUtils.Windows`](https://github.com/rez23/PsBananaUtils.Windows):<br>
+Simple provide some aliases functions to `New-Item -ItemType Directory` eccetera that maintains completion
+
+And more. Get all available commands using `Get-Command`:
+```powershell
+Get-Command -Module PsBananaUtils*
+```
+
+[Get it on PowerShell Gallery](https://www.powershellgallery.com/packages/PsBananaUtils)
+
 ## Support the project
 If you like my work, leave a star on this repository or donate me a coffee:
 - https://paypal.me/rez23774
